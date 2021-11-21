@@ -24,7 +24,7 @@
 
     ::placeholder {
         color: white;
-        font-size: 0.875rem;
-        font-weight: 400;
+        font-size: 1rem;
+        font-weight: bold;        
     }
 </style>
