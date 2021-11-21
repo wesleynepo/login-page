@@ -1,9 +1,11 @@
 <script lang="ts">
-
+    export let label: string;
 </script>
 
-<input type="checkbox" name="checkbox">
-
+<label>
+    <input type="checkbox" name="checkbox">
+    {label}
+</label>
 
 <style>
     input[type="checkbox"] {
@@ -21,6 +23,7 @@
         border-width: 0;
         display: grid;
         place-content: center;                
+        margin-right: 0.5rem;
     }
 
     input[type="checkbox"]::before {
@@ -34,5 +37,10 @@
 
     input[type="checkbox"]:checked::before {
         transform: scale(1);
+    }
+
+    label {
+        display: flex;
+        flex-direction: row;
     }
 </style>
