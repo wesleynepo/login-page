@@ -10,5 +10,10 @@ module.exports = {
   ],
   "svelteOptions": {
     "preprocess": require("svelte-preprocess")()
-  }
+  },
+  webpackFinal: async (config) => {
+    const svelteLoader = config.module.rules.find( (r) => r.loader && r.loader.includes('svelte-loader'))
+    svelteLoader.options.preprocess = require('svelte-preprocess')()
+    return config
+  },
 }

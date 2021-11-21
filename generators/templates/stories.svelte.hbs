@@ -1,0 +1,22 @@
+<script>
+    import { Meta, Template, Story } from "@storybook/addon-svelte-csf";
+    import {{pascalCase name}} from "./{{pascalCase name}}.svelte";
+</script>
+  
+  <!-- More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export -->
+  <!-- More on argTypes: https://storybook.js.org/docs/svelte/api/argtypes -->
+<Meta
+  title='{{pascalCase name}}'
+  component={{{pascalCase name}}}
+/>
+
+<Template let:args>
+  <{{pascalCase name}}
+   {...args}
+  />
+</Template>
+
+<Story
+  name="Normal"
+/>
+
