@@ -34,6 +34,7 @@
         align-items: center;
         flex-direction: column;
         max-width: 21.6rem;
+        margin: auto;
     }
 
     form {

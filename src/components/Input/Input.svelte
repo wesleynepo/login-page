@@ -12,7 +12,7 @@
         background-color: #224957;
         height: 2.8125rem;
         width: 100%;
-        max-width: 16.525rem;
+        max-width: 18.75rem;
         border-radius: 0.625rem;
         border: none;
         padding: 0 1.125rem;
