@@ -16,10 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      
-      - name: deps
-        run: npm install
-        
-      - name: Deploy
-        run: npm run deploy
+      - uses: actions/checkout@v2      
+      - name: deploy
+        run: |
+          npm install
+          npm run deploy
