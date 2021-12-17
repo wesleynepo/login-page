@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on:
+
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+
+jobs:
+
+  build:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: deps
+        run: npm install
+        
+      - name: Deploy
+        run: npm deploy
