@@ -16,8 +16,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2      
-      - name: deploy
-        run: |
-          npm install
-          npm run deploy
+    - uses: actions/checkout@v2      
+    - name: deploy
+      run: |
+        npm install
+    
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3.7.3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
