@@ -1,7 +1,8 @@
 {
-  "name": "svelte-app",
+  "name": "svelte-login-page",
   "version": "1.0.0",
   "private": true,
+  "homepage": "http://wesleynepo.github.io/login-page",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -9,7 +10,9 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "generate": "plop --plopfile ./generators/plopfile.js"
+    "generate": "plop --plopfile ./generators/plopfile.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -38,6 +41,7 @@
     "typescript": "^4.0.0"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "sirv-cli": "^1.0.0"
   }
 }
