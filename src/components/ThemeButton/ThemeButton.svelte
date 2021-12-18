@@ -45,5 +45,13 @@
         border: none;
         background-color: transparent;
         cursor: pointer;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    button:hover,
+    button:focus {
+        background: transparent;
+        transform: scale(1.05);
     }
 </style>

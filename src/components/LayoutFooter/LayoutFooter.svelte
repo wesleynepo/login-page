@@ -1,7 +1,12 @@
 <script lang="ts">
+import ThemeButton from "../ThemeButton/ThemeButton.svelte";
+
 </script>
 
-<div>
+<div class="container">
+    <div class="button-wrapper">
+        <ThemeButton />
+    </div>
     <svg viewBox="0 0 1280 111" preserveAspectRatio="xMinYMin meet">
         <path
             fill="#20DF7F"
@@ -26,12 +31,20 @@
         left: 0;
     }
 
-    div {
+    .container {
         display: inline-block;
         position: relative;
         width: 100%;
         padding-bottom: 11rem;
         vertical-align: middle;
         overflow: hidden;
+    }
+
+    .button-wrapper {
+        display: inline-block;
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        z-index: 2;
     }
 </style>
