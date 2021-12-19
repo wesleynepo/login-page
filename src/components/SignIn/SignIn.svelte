@@ -2,26 +2,32 @@
     import Button from "../Button/Button.svelte";
     import Checkbox from "../Checkbox/Checkbox.svelte";
     import Input from "../Input/Input.svelte";
+import Spinner from "../Spinner/Spinner.svelte";
+
+    let isLoading = false;
+
+    const onSubmit = (event) => {
+        isLoading = true;
+    };
 </script>
 
-<div class="container"> 
-    <h1>
-        Sign in
-    </h1>
-    <p>
-        Sign in and start managing your candidates!
-    </p>
-    <form>
-        <Input label="Login" />
-        <Input label="Password" type="password" />
-        <div class="options">
-            <Checkbox label="Remember me" />
-            <a href="/">Forgot password?</a>
-        </div>
-        <Button label="Login" />
-    </form>
+<div class="container">
+    {#if isLoading}
+        <Spinner />
+    {:else}
+        <h1>Sign in</h1>
+        <p>Sign in and start managing your candidates!</p>
+        <form>
+            <Input label="Login" required />
+            <Input label="Password" type="password" required />
+            <div class="options">
+                <Checkbox label="Remember me" />
+                <a href="/">Forgot password?</a>
+            </div>
+            <Button label="Login" onclick={onSubmit} />
+        </form>
+    {/if}
 </div>
-
 
 <style>
     h1 {
@@ -38,11 +44,11 @@
     }
 
     form {
-        display:flex;
+        display: flex;
         align-items: center;
         flex-direction: column;
     }
-    
+
     p {
         margin-bottom: 2.25rem;
     }

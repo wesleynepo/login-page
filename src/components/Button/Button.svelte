@@ -1,8 +1,9 @@
 <script lang="ts">
     export let label:string;
+    export let onclick;
 </script>
 
-<button>
+<button on:click={onclick} >
     <span>
         {label}
     </span>

@@ -1,9 +1,10 @@
 <script lang="ts">
     export let label: string;
     export let type: string = 'text';
+    export let required: boolean = false;
 </script>
 
-<input placeholder={label} type={type} />
+<input placeholder={label} type={type} required={required}/>
 
 
 <style>
