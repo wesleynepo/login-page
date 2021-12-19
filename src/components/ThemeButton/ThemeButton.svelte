@@ -1,7 +1,10 @@
 <script lang="ts">
+    import { getContext } from "svelte"
+
+    const { toggle } = getContext('theme')
 </script>
 
-<button>
+<button on:click={toggle}>
     <svg width="78" height="78" fill="none" xmlns="http://www.w3.org/2000/svg"
         ><g filter="url(#a)"><circle cx="39" cy="35" r="35" fill="#fff" /></g
         ><circle cx="39.5" cy="34.5" r="21.5" fill="#2D2D2D" /><path

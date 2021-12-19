@@ -29,7 +29,7 @@
     }
 
     .container {
-        color: #224957;
+        color: var(--theme-colors-text);
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -52,7 +52,7 @@
     }
 
     a:visited {
-        color:#224957;
+        color: var(--theme-colors-text);
     }
 
     .options {
